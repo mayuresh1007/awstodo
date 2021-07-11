@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} Registration {% endblock title %}
+{% block body %}
+<img src="{{ url_for('static', filename='static/logo (50x50)'.png) }}" alt="">
+
+<!-- form register-login -->
+<!-- style="margin: -7px 316px;" -->
+
+<form method="POST" action="/" class="row g-2 justify-content-center">
+  <!-- {% if new_user == users  %} -->
+  <div class="col-auto">
+    <label for="username" class="visually-hidden">Name</label>
+    <input type="text" class="form-control" id="username" name="username" value=""  placeholder="Enter Name" required> 
+  </div>
+  <div class="col-auto">
+    <label for="staticEmail2" class="visually-hidden">Email</label>
+    <input type="text" class="form-control" id="staticEmail2" name="email" value=""  placeholder="Enter Email" required>
+  </div>
+  <div class="col-auto">
+    <label for="Password2" class="visually-hidden">Password</label>
+    <input type="password" class="form-control" id="Password2" name="password"  placeholder="Password" required>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-outline-dark mb-3">Regitser</button>
+  </div>
+</form>
+<div class="container" style="text-align: center;">
+  <p>Already member? <a href="/login">Login Here</a></p>
+</div>
+<!-- {% else %}
+      You are alredy registered !!! 
+  {% endif %}
+   -->
+   
+{% endblock body %}

@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+hr.new1{
+border: 1px solid black;
+}
+.table-tr{
+    background-color: #6a6666;
+}
+.navlogo{
+    cursor: pointer;
+    image-resolution: auto;
+}
+
+.container{
+    justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    height: 75px;
+    /* height dili ahe hithenav bar la */
+    position:relative;
+    /* its make hrizontal to content in nav bar/container */
+    /* border: 2px solid red; */
+}
+.navbar{
+    margin: 0px;
+    padding: 15px 11px;
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+.navbar .item{
+    font-size: 1.2rem;
+    /* margin: 0px 0px; */
+    padding: 7px 12px;
+    
+}
+.item a{
+
+    color: black;
+    text-decoration: none;
+    /* remove underline bellow the items */
+    border-radius: 20px;
+}
+.item a:hover{
+    padding: 2px 10px;
+    color: white;
+    /* text-decoration: none; */
+    /* remove underline bellow the items */
+    background-color: #6a6666;
+    
+}
+body{
+    /* background-image: url('https://source.unsplash.com/1600x900/?list'); */
+    background-image: url('static/bg2.jpg') ;
+    /* no-repeat center center/cover */
+    opacity: 0.99;
+    position: relative;
+    /* height: 100%; */
+    /* width: 100%; */
+    image-resolution: 1208px 1000px;
+}
+.table{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+   
+      
+.th{
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 250px;
+}
+
+tr:nth-child(even) {
+        background-color: #6a6666;
+        /* cursor: pointer; */
+}
+.btn{
+    /* color: grey; */
+    padding: 5px;
+    margin: 3px;
+    border: 1px solid black;
+    border-radius: 5px ;
+    background-color: rgb(94, 89, 89);;
+}
+.btn:hover{
+    background-color: rgb(94, 89, 89);
+    color: white;
+}
+/* .btn-p{
+    display: flex;
+    position: relative;
+    top:78px;
+    left:1080px;
+} */
+.btn-p{
+    /* display: block;
+    margin: auto;
+ */
+ text-align: center;
+}
+/* login */

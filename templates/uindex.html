@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %} Home-Todo {% endblock title %}
+{% block body %}
+  <!-- table -->
+  <div class="container my-1">
+    <h4>{{ session.username }}'s Todo </h4>
+    <form action="/uindex" method="POST">
+      <div class="mb-2">
+        <label for="title" class="form-label">Todo Title</label>
+        <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Todo Description</label>
+        <input type="text" class="form-control" name="desc" id="desc">
+      </div>
+
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
+    </form>
+  </div>
+
+
+  <tbody>
+    {% if alltodo|length==0 %}
+    <div class="alert alert-secondary container table" role="alert">
+      No To-Do record found! Add Your Todo Now !
+    </div>
+    {% else %}
+    <table class="container table">
+      <thead>
+        <tr>
+          <th scope="col">Sno</th>
+          <th scope="col">Title</th>
+          <th scope="col">Discription</th>
+          <th scope="col">Date/Time</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+
+      {% endif %}
+      {% for todo in alltodo %}
+
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{todo.title}}</td>
+        <td>{{todo.desc}}</td>
+        <td>{{todo.date_created}}</td>
+        <td>
+          <div>
+            <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm">Update</a>
+            <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm">Delete</a>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+  </tbody>
+  </table>
+
+  </div>
+  <!-- form login -->
+  <!-- style="margin: -7px 316px;" -->
+  <!-- <form form action="/login" method="POST" class="row g-2 justify-content-center">
+    <div class="col-auto">
+      <label for="staticEmail2" class="visually-hidden">Email</label>
+      <input type="text" class="form-control" id="staticEmail2" name="email" placeholder="example@email.com">
+    </div>
+    <div class="col-auto">
+      <label for="inputPassword2" class="visually-hidden">Password</label>
+      <input type="password" class="form-control" id="inputPassword2" name="password" placeholder="Password">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-outline-dark mb-3">Login</button>
+    </div>
+    <div class="col-auto">
+      <label for="staticEmail2" class="visually-hidden">Username</label>
+      <input type="text" class="form-control" id="staticEmail2" name="username" placeholder="username">
+  </div>
+  </form> -->
+  {% endblock body %}
+  
